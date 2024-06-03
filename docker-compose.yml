@@ -1,5 +1,7 @@
 services:
   juice-shop:
     image: bkimminich/juice-shop
+    environment:
+      - NODE_ENV=unsafe
     ports:
       - "3000:3000"
