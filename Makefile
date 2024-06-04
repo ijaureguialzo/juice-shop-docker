@@ -5,6 +5,8 @@ help: _header
 	@echo Opciones:
 	@echo ----------------------
 	@echo start / stop / restart
+	@echo update
+	@echo logs
 	@echo clean
 	@echo ----------------------
 
@@ -28,6 +30,12 @@ stop:
 	@docker compose stop
 
 restart: stop start
+
+update:
+	@docker compose pull
+
+logs:
+	@docker compose logs
 
 clean:
 	@docker compose down -v --remove-orphans
